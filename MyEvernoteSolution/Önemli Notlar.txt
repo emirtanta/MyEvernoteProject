@@ -1,0 +1,47 @@
+
+MyEvernote Katmanlý Mimari ile Proje uygulamasý geliþtirildi.
+*Ýsimlendirme kurallarý Solution adý. classLibrary adý þeklinde yapýldý.
+
+Önemli notlar:
+*bootsnip sayfasýndan hazýr login(https://bootsnipp.com/snippets/pjDne),register,yorum sayfalarý kullanýlabilir
+*GlobalAssac sýnýfýnda deðiþiklikler yapýlýr
+
+=>MyEvernote.WebApp
+
+*Kullanýcý arayüzü kýsmý.
+*Asp.net web application þeklinde projeye ilk olarak dahil edildi.(ClassLibrary þeklinde deðil)
+*Bu kýsýmda mvc üzerinde kullanýcýnýn göreceði web sayfalarý üzerinde html-css kod düzenlemeleri yapýldý
+*BusinessLayer,Common katmaný ve Entites katmanlarý ile iletiþim halindedir
+*connection string burada oluþturulur
+*EntityFremework burada da kullanýlýr
+
+
+=>MyEvernote.DataAccesLayer
+
+*MyEvernote.Entites ve Common katmaný referans edilir
+*EntityFreamwork burada tanýmlandý
+*veritabaný tablolarý oluþturulur
+*isteðe baðlý olarak hazýr data ile çalýþmak için nuget üzerinden fakedata indirilir
+*fake data ile rastgele MyInitializer.cs kýsmýna örnek veriler eklendi
+*Repository'ler burada tanýmlanýr.
+
+
+=>MyEvernote.BusinessLayer
+
+*Yapýlacak CRUD iþlemlerinin gerçekleþtirildiði katmandýr.
+*EntityFramework burada da kullanýlýr
+*Üyelik iþlemlerini yapýldýðý katmandýr.
+*Entity Freamwork context bulunur
+*DataAccesLayer katmaný ve Coomon katmaný ile etkileþim halindedir.
+*Entities katmaný ile etkileþim halindedir.
+*CategoryManager gibi yapýlar oluþturularak WebApp kýsmýnda kullanýcýya verilerin gösterilmesi saðlandý
+
+
+=>MyEvernote.Entites
+
+*Veritabanýndaki tablolarýn class tanýmlamalarý yapýldý.
+*Bu kýsým hem BusinesLayer hem DataAccesLayer hem de WepApp katmaný ile iletiþim
+halindedir.
+
+=>MyEvernote.Common
+*

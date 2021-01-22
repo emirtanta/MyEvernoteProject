@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "About";
+}
+
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            @* kategoriler bölümü *@
+            @Html.Partial("_PartialCategories")
+        </div>
+
+        <div class="col-md-7 col-md-offset-1">
+            @* resmi ortalar class kısmı *@
+            <img src="http://placehold.it/800x300" class="center-block img-responsive img-rounded img-thumbnail" alt="Alternate Text"/>
+            <br />
+            <div class="row">
+                <h2 class="text-center">Hakkımızda Başlık</h2>
+            </div>
+            <p>
+                Hakkımızda açıklama
+            </p>
+        </div>
+    </div>
+</div>
+
